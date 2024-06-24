@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SinglefruitComponent } from './singlefruit/singlefruit.component';
 
 @Component({
   selector: 'app-fruitlist',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SinglefruitComponent],
   templateUrl: './fruitlist.component.html',
   styleUrl: './fruitlist.component.scss',
 })
@@ -84,4 +85,8 @@ export class FruitlistComponent {
       ],
     },
   ];
+
+  numLog(index: number) {
+    console.log(index);
+  }
 }
