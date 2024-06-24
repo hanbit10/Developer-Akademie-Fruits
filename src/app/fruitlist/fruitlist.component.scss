@@ -8,6 +8,14 @@
   padding: 64px 0;
 }
 
+.fontColorGood {
+  color: green;
+}
+
+.fontColorBad {
+  color: red;
+}
+
 .singleFruitBox {
   padding-left: 200px;
   display: flex;
@@ -26,7 +34,8 @@
       filter: drop-shadow(0 0 20px rgb(0, 0, 0));
     }
 
-    box-shadow: 5.7px 5.7px 2.2px rgba(0, 0, 0, 0.032),
+    box-shadow:
+      5.7px 5.7px 2.2px rgba(0, 0, 0, 0.032),
       11.5px 11.5px 5.3px rgba(0, 0, 0, 0.04),
       17.9px 17.9px 10px rgba(0, 0, 0, 0.044),
       26.2px 26.2px 17.9px rgba(0, 0, 0, 0.048),
@@ -46,7 +55,8 @@
     flex-direction: column;
     gap: 16px;
 
-    box-shadow: 5.7px 5.7px 2.2px rgba(0, 0, 0, 0.032),
+    box-shadow:
+      5.7px 5.7px 2.2px rgba(0, 0, 0, 0.032),
       11.5px 11.5px 5.3px rgba(0, 0, 0, 0.04),
       17.9px 17.9px 10px rgba(0, 0, 0, 0.044),
       26.2px 26.2px 17.9px rgba(0, 0, 0, 0.048),

@@ -10,14 +10,6 @@
           <p><b>Bewertung:</b></p>
           <div>
             @for (count of [1, 2, 3, 4, 5]; track fruitlist) {
-              <!-- @if (fruit.stars >= count) {
-                <img src="./assets/img/stars/star.svg" alt="" srcset="" />
-              } @else if (fruit.stars >= count - 0.5) {
-                <img src="./assets/img/stars/star-half.svg" alt="" srcset="" />
-              } @else {
-                <img src="./assets/img/stars/star-empty.svg" alt="" srcset="" />
-              } -->
-
               @switch (true) {
                 @case (fruit.stars >= count) {
                   <img src="./assets/img/stars/star.svg" alt="" srcset="" />
@@ -29,7 +21,6 @@
                     srcset=""
                   />
                 }
-
                 @case (fruit.stars < count) {
                   <img
                     src="./assets/img/stars/star-empty.svg"
@@ -39,7 +30,20 @@
                 }
               }
             }
-            <p>({{ fruit.stars }})</p>
+            <!-- <p
+              [ngStyle]="{
+                color: fruit.stars > 3 ? fontColorGood : fontColorBad
+              }"
+            >
+              ({{ fruit.stars }})
+            </p> -->
+
+            <p [ngClass]="fruit.stars > 3 ? 'fontColorGood' : 'fontColorBad'">
+              ({{ fruit.stars }})
+            </p>
+            <p [ngClass]="{ fontColorGood: fruit.stars > 3 }">
+              ({{ fruit.stars }})
+            </p>
           </div>
         </div>
         <div><b>Art:</b><br />{{ fruit.genus }}</div>
