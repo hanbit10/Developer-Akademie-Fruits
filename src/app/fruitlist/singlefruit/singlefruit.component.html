@@ -37,10 +37,10 @@
         }
       </div>
       <div>
-        <input type="text" />
+        <input [(ngModel)]="inputData" type="text" />
         <button>
           <img
-            (click)="emitName()"
+            (click)="sendInputData()"
             src="./assets/img/arrow-35-32.png"
             alt=""
             srcset=""

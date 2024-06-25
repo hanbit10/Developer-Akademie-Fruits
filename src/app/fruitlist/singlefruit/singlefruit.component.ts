@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-singlefruit',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, FormsModule],
   templateUrl: './singlefruit.component.html',
   styleUrl: './singlefruit.component.scss',
 })
@@ -97,7 +98,9 @@ export class SinglefruitComponent {
 
   @Output() fruitName = new EventEmitter<string>();
 
-  emitName() {
-    this.fruitName.emit(this.fruit.name);
+  inputData = '';
+  sendInputData() {
+    this.fruitName.emit(this.inputData);
+    this.inputData = '';
   }
 }
