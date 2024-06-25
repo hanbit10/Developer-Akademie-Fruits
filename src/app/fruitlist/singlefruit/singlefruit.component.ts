@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -94,4 +94,10 @@ export class SinglefruitComponent {
       ],
     },
   ];
+
+  @Output() fruitName = new EventEmitter<string>();
+
+  emitName() {
+    this.fruitName.emit(this.fruit.name);
+  }
 }
